@@ -17,9 +17,10 @@
 
 <body>
     <header class="header">
-        <div class="container container-header">
+        <div class="container header__container">
             <nav class="navigation">
-                <a class="logotype link" href="./index.html" lang="en">Web<span class="logo-header">Studio</span></a>
+                <a class="logotype logotype-header link" href="./index.html" lang="en">Web<span
+                        class="logo-header">Studio</span></a>
                 <ul class="menu list">
                     <li class="menu__item">
                         <a class="menu__link link" href="./index.html">Студія</a>
@@ -30,6 +31,12 @@
                     <li class="menu__item"><a class="menu__link link" href="#">Контакти</a></li>
                 </ul>
             </nav>
+            <button type="button" class="mobile-menu-btn" data-menu-open>
+                <svg class="mobile-menu-btn__icon">
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+
+            </button>
             <ul class="menu-contact list">
                 <li class="menu-contact__item">
                     <a class="menu-contact__link link" href="mailto:info@devstudio.com">
@@ -44,6 +51,43 @@
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon">
+                        <use href="./images/sprite.svg#icon-modal-btn-close"></use>
+                    </svg>
+
+                </button>
+                <ul class="mobile-menu__list list">
+                    <li class="mobile-menu__item"><a class="mobile-menu__link link" href="./index.html">Студія</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__link link mobile-menu__link_current"
+                            href="./portfolio.html">Портфоліо</a></li>
+                    <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#">Контакти</a></li>
+                </ul>
+                <ul class="mobile-menu-contact list">
+                    <li class="mobile-menu-contact__item"><a class="mobile-menu-contact__tel-link link" href="">+38 096
+                            111
+                            11 11</a></li>
+                    <li class="mobile-menu-contact__item"><a class="mobile-menu-contact__email-link link"
+                            href="">info@devstudio.com</a></li>
+
+                </ul>
+                <ul class="mobile-menu-social list">
+                    <li class="mobile-menu-social__item"><a class="mobile-menu-social__link link" href="">Instagram</a>
+                    </li>
+                    <li class="mobile-menu-social__item"><a class="mobile-menu-social__link link" href="">Twitter</a>
+                    </li>
+                    <li class="mobile-menu-social__item"><a class="mobile-menu-social__link link" href="">Facebook</a>
+                    </li>
+                    <li class="mobile-menu-social__item"><a class="mobile-menu-social__link link" href="">LinkedIn</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
     </header>
 
@@ -69,7 +113,31 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/laptop.jpg" alt="Ноутбук з веб-сайтом" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/laptop-desktop.webp 1x, ./images/portfolio/laptop-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-desktop.jpg 1x, ./images/portfolio/laptop-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/laptop-tablet.webp 1x, ./images/portfolio/laptop-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-tablet.jpg 1x, ./images/portfolio/laptop-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/laptop-mobile.webp 1x, ./images/portfolio/laptop-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-mobile.jpg 1x, ./images/portfolio/laptop-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/laptop.jpg"
+                                        alt="Ноутбук з веб-сайтом" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -83,8 +151,31 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/design.jpg" alt="Двоє чоловіків грають у баскетбол" width="370"
-                                    height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/design-desktop.webp 1x, ./images/portfolio/design-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/design-desktop.jpg 1x, ./images/portfolio/design-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/design-tablet.webp 1x, ./images/portfolio/design-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/design-tablet.jpg 1x, ./images/portfolio/design-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/design-mobile.webp 1x, ./images/portfolio/design-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/design-mobile.jpg 1x, ./images/portfolio/design-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/design.jpg"
+                                        alt="Двоє чоловіків грають у баскетбол" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -100,7 +191,30 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/app.jpg" alt="Логотип ресторану" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/app-desktop.webp 1x, ./images/portfolio/app-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/app-desktop.jpg 1x, ./images/portfolio/app-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/app-tablet.webp 1x, ./images/portfolio/app-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/app-tablet.jpg 1x, ./images/portfolio/app-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/app-mobile.webp 1x, ./images/portfolio/app-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/app-mobile.jpg 1x, ./images/portfolio/app-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/app.jpg" alt="Логотип ресторану" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -114,7 +228,29 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/marketing.jpg" alt="Навушники" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/marketing-desktop.webp 1x, ./images/portfolio/marketing-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/marketing-desktop.jpg 1x, ./images/portfolio/marketing-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/marketing-tablet.webp 1x, ./images/portfolio/marketing-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/marketing-tablet.jpg 1x, ./images/portfolio/marketing-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/marketing-mobile.webp 1x, ./images/portfolio/marketing-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/marketing-mobile.jpg 1x, ./images/portfolio/marketing-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+                                    <img class="service-card__img" src="./images/marketing.jpg" alt="Навушники" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -128,7 +264,30 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/block.jpg" alt="Дві коробки" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/block-desktop.webp 1x, ./images/portfolio/block-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/block-desktop.jpg 1x, ./images/portfolio/block-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/block-tablet.webp 1x, ./images/portfolio/block-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/block-tablet.jpg 1x, ./images/portfolio/block-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/block-mobile.webp 1x, ./images/portfolio/block-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/block-mobile.jpg 1x, ./images/portfolio/block-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/block.jpg" alt="Дві коробки" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -142,8 +301,31 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/computer.jpg" alt="Комп'ютер з веб-сайтом" width="370"
-                                    height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/computer-desktop.webp 1x, ./images/portfolio/computer-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/computer-desktop.jpg 1x, ./images/portfolio/computer-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/computer-tablet.webp 1x, ./images/portfolio/computer-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/computer-tablet.jpg 1x, ./images/portfolio/computer-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/computer-mobile.webp 1x, ./images/portfolio/computer-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/computer-mobile.jpg 1x, ./images/portfolio/computer-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/computer.jpg"
+                                        alt="Комп'ютер з веб-сайтом" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -157,7 +339,30 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/book.jpg" alt="Відкрита книга" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/book-desktop.webp 1x, ./images/portfolio/book-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/book-desktop.jpg 1x, ./images/portfolio/book-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/book-tablet.webp 1x, ./images/portfolio/book-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/book-tablet.jpg 1x, ./images/portfolio/book-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/book-mobile.webp 1x, ./images/portfolio/book-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/book-mobile.jpg 1x, ./images/portfolio/book-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/book.jpg" alt="Відкрита книга" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -171,7 +376,30 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/label.jpg" alt="Етикетка" width="370" height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/label-desktop.webp 1x, ./images/portfolio/label-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/label-desktop.jpg 1x, ./images/portfolio/label-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/label-tablet.webp 1x, ./images/portfolio/label-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/label-tablet.jpg 1x, ./images/portfolio/label-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/label-mobile.webp 1x, ./images/portfolio/label-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/label-mobile.jpg 1x, ./images/portfolio/label-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/label.jpg" alt="Етикетка" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -185,8 +413,31 @@
                     <li class="service-card__item">
                         <a class="service-card__link link" href="#">
                             <div class="service-wrap">
-                                <img src="./images/laptop-app.jpg" alt="Чоловік працює за ноутбуком" width="370"
-                                    height="294" />
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-desktop.webp 1x, ./images/portfolio/laptop-app-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-desktop.jpg 1x, ./images/portfolio/laptop-app-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-tablet.webp 1x, ./images/portfolio/laptop-app-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-tablet.jpg 1x, ./images/portfolio/laptop-app-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-mobile.webp 1x, ./images/portfolio/laptop-app-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" type="image/webp" />
+                                    <source
+                                        srcset="./images/portfolio/laptop-app-mobile.jpg 1x, ./images/portfolio/laptop-app-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+
+                                    <img class="service-card__img" src="./images/laptop-app.jpg"
+                                        alt="Чоловік працює за ноутбуком" />
+                                </picture>
                                 <p class="service-card__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                     функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
@@ -273,6 +524,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .team-list {
@@ -60,5 +60,20 @@
   &:focus {
     background-color: var(--accent-color);
     fill: var(--light-text-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .team-list__card {
+    width: 100%;
+  }
+  .team-list__img {
+    width: 100%;
   }
 }
